@@ -3,4 +3,9 @@ import ReactDOM from "react-dom";
 
 import { Button } from "@ds.e/react";
 
-ReactDOM.render(<Button label="Test" />, document.querySelector("#root"));
+import "@ds.e/scss/lib/Button";
+
+ReactDOM.render(
+  <Button label="Example Button" />,
+  document.querySelector("#root")
+);
