@@ -8,7 +8,7 @@
 
 ## Todo
 
-- [ ] update ReactDOM.render to the new createRoot method of React v18
+- [x] update ReactDOM.render to the new createRoot method of React v18
 
 ## Instalation
 

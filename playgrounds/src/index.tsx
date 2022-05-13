@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { Button } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Button";
 
-ReactDOM.render(
-  <Button label="Example Button" />,
-  document.querySelector("#root")
-);
+const container = document.getElementById("root");
+const root = createRoot(container!);
+root.render(<Button label="Example Button" />);
