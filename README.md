@@ -26,7 +26,7 @@ To build all packages at once:
 yarn build
 ```
 
-# Testing on the Playground
+## Testing on the Playground
 
 Needs to be installed first.
 
@@ -34,4 +34,12 @@ Open the terminal on the playground folder and run the following command:
 
 ```sh
 yarn dev
+```
+
+## Development Mode
+
+To install all the dependencies and start the development server with hot reloadings go the the root folder of the project and run the following:
+
+```sh
+yarn && yarn dev
 ```
