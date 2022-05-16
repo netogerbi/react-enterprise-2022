@@ -1,8 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { Spacing } from "@ds.e/foundation";
-import { Color, Image } from "@ds.e/react";
+import { Spacing, FontSize } from "@ds.e/foundation";
+import { Color, Image, Text } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Utilities.css";
 
@@ -17,5 +17,7 @@ root.render(
       width={Spacing.md}
       height={Spacing.md}
     />
+    <br />
+    <Text children="This is a text" size={FontSize.xl} />
   </>
 );

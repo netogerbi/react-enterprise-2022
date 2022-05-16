@@ -9,3 +9,9 @@
     height: $value;
   }
 }
+
+@each $size, $value in $fs {
+  .dse-text-#{$size} {
+    font-size: $value;
+  }
+}
