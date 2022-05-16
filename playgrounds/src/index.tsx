@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { Color, Image, Spacing } from "@ds.e/react";
+import { Spacing } from "@ds.e/foundation";
+import { Color, Image } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Utilities.css";
 

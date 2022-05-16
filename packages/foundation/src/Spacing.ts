@@ -1,4 +1,4 @@
-export enum Spacing {
+enum Spacing {
   none = "none",
   xxxs = "xxxs",
   xxs = "xxs",
@@ -10,3 +10,5 @@ export enum Spacing {
   xxl = "xxl",
   xxxl = "xxxl",
 }
+
+export default Spacing;
