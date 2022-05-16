@@ -2,10 +2,11 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 import { Spacing, FontSize } from "@ds.e/foundation";
-import { Color, Image, Text } from "@ds.e/react";
+import { Color, Image, Text, Margin } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Utilities.css";
 import "@ds.e/scss/lib/Text.css";
+import "@ds.e/scss/lib/Margin.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -19,6 +20,10 @@ root.render(
       height={Spacing.md}
     />
     <br />
-    <Text children="This is a text" size={FontSize.xl} />
+    <div>
+      <Margin top space="lg">
+        <Text children="This is a text" size={FontSize.xl} />
+      </Margin>
+    </div>
   </>
 );
