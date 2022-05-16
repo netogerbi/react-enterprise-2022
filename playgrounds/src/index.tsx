@@ -5,6 +5,7 @@ import { Spacing, FontSize } from "@ds.e/foundation";
 import { Color, Image, Text } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Utilities.css";
+import "@ds.e/scss/lib/Text.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
