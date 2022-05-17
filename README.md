@@ -43,3 +43,12 @@ To install all the dependencies and start the development server with hot reload
 ```sh
 yarn && yarn dev
 ```
+
+## Tests
+
+open the terminal on the root folder and type the following.
+Obs. Needs to be installed first. See "Instalation" section of this README.
+
+```sh
+yarn test
+```
