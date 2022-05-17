@@ -4,3 +4,5 @@ yarn.lock
 .cache
 dist
 lib
+
+__snapshots__
