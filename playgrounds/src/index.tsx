@@ -2,11 +2,12 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 import { Spacing, FontSize } from "@ds.e/foundation";
-import { Color, Image, Text, Margin } from "@ds.e/react";
+import { Color, Image, Text, Margin, Select } from "@ds.e/react";
 
 import "@ds.e/scss/lib/Utilities.css";
 import "@ds.e/scss/lib/Text.css";
 import "@ds.e/scss/lib/Margin.css";
+import "@ds.e/scss/lib/Select.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -25,5 +26,17 @@ root.render(
         <Text children="This is a text" size={FontSize.xl} />
       </Margin>
     </div>
+    <br />
+    <Select
+      options={[
+        { value: "neto", label: "Neto" },
+        { value: "tati", label: "Tati" },
+      ]}
+      // renderOption={({ option, getOptionRecommendedProps }) => (
+      //   <p {...getOptionRecommendedProps({ className: "custom" })}>
+      //     {option.label}
+      //   </p>
+      // )}
+    />
   </>
 );
