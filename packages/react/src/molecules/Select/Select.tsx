@@ -138,6 +138,7 @@ const Select: React.FC<SelectProps> = ({
   return (
     <div className="dse-select">
       <button
+        data-testid="DseSelectButton"
         aria-controls="dse-select-list"
         aria-haspopup
         aria-expanded={isOpen || undefined}
