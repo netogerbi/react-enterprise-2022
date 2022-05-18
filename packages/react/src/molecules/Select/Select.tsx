@@ -166,66 +166,70 @@ const Select: React.FC<SelectProps> = ({
         </svg>
       </button>
 
-      {isOpen ? (
-        <ul className="dse-select__overlay" id="dse-select-list" role="menu">
-          {options.map((option, optionIndex) => {
-            const isSelected = optionIndex === selected;
-            const isHighlighted = highlightedIndex === optionIndex;
+      <ul
+        className={`dse-select__overlay ${
+          isOpen ? "dse-select__overlay--open" : ""
+        }`}
+        id="dse-select-list"
+        role="menu"
+      >
+        {options.map((option, optionIndex) => {
+          const isSelected = optionIndex === selected;
+          const isHighlighted = highlightedIndex === optionIndex;
 
-            const ref = optionRefs[optionIndex];
+          const ref = optionRefs[optionIndex];
 
-            const renderOptionProps = {
-              ref,
-              option,
-              isSelected,
-              getOptionRecommendedProps: (overrideProps = {}) => {
-                return {
-                  ref,
-                  role: "menuitemradio",
-                  "aria-label": option.label,
-                  "aria-checked": isSelected || undefined,
-                  onKeyDown: onOptionKeyDown,
-                  tabIndex: isHighlighted ? -1 : 0,
-                  onMouseEnter: () => highlightOption(optionIndex),
-                  onMouseLeave: () => highlightOption(null),
-                  className: `dse-select__option
+          const renderOptionProps = {
+            ref,
+            option,
+            isSelected,
+            getOptionRecommendedProps: (overrideProps = {}) => {
+              return {
+                ref,
+                role: "menuitemradio",
+                "aria-label": option.label,
+                "aria-checked": isSelected || undefined,
+                onKeyDown: onOptionKeyDown,
+                tabIndex: isHighlighted ? -1 : 0,
+                onMouseEnter: () => highlightOption(optionIndex),
+                onMouseLeave: () => highlightOption(null),
+                className: `dse-select__option
                       ${isSelected ? "dse-select__option--selected" : ""}
                       ${isHighlighted ? "dse-select__option--highlighted" : ""}
                   `,
-                  key: option.value,
-                  onClick: () => handleSelect(option, optionIndex),
-                  ...overrideProps,
-                };
-              },
-            };
+                key: option.value,
+                onClick: () => handleSelect(option, optionIndex),
+                ...overrideProps,
+              };
+            },
+          };
 
-            if (renderOption) {
-              return renderOption(renderOptionProps);
-            }
+          if (renderOption) {
+            return renderOption(renderOptionProps);
+          }
 
-            return (
-              <li {...renderOptionProps.getOptionRecommendedProps()}>
-                <Text>{option.label}</Text>
+          return (
+            <li {...renderOptionProps.getOptionRecommendedProps()}>
+              <Text>{option.label}</Text>
 
-                {isSelected ? (
-                  <svg
-                    width="1rem"
-                    height="1rem"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M5 13l4 4L19 7" />
-                  </svg>
-                ) : null}
-              </li>
-            );
-          })}
-        </ul>
-      ) : null}
+              {isSelected ? (
+                <svg
+                  width="1rem"
+                  height="1rem"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M5 13l4 4L19 7" />
+                </svg>
+              ) : null}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

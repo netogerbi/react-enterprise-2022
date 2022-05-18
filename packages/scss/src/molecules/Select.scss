@@ -35,6 +35,11 @@
     width: 100%;
 
     top: calc(100% + 10px);
+
+    display: none;
+    &--open {
+      display: block;
+    }
   }
 
   &__caret {
