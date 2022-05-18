@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "yarn build -w",
-    "test": "jest"
+    "test": "jest --updateSnapshot"
   },
   "publishConfig": {
     "access": "public"
