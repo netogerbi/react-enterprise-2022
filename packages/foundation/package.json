@@ -14,5 +14,11 @@
     "build": "tsc",
     "dev": "yarn build -w",
     "test": "jest"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ]
 }
