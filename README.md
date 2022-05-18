@@ -6,6 +6,11 @@
 - Story Book
 - Automated Tests
 
+## Todo
+
+- [ ] add CHROMATIC regression test to ci
+- [ ] configure netlify to build and deploy story books
+
 ## Instalation
 
 Open the terminal on the root folder and type the following.

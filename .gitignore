@@ -6,3 +6,4 @@ dist
 lib
 
 __snapshots__
+storybook-static
