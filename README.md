@@ -6,10 +6,6 @@
 - Story Book
 - Automated Tests
 
-## Todo
-
-- [x] update ReactDOM.render to the new createRoot method of React v18
-
 ## Instalation
 
 Open the terminal on the root folder and type the following.
