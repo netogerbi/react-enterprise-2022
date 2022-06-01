@@ -1,4 +1,4 @@
-# Avanced React Boilerplate for Enterprise
+# Avanced React Concepts - Case Study
 
 - yarn
 - Atomic Design
